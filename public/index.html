@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,41 +11,39 @@
 
 <body>
     <header>Tool Inventory</header>
-    <script src="index.js"></script>
+    
     <div>
-        <form>
+        <form id="tool-form">
             <label for="tname">Tool: </label><br>
-            <input type="text" id="tname"><br>
-            <label type="text">Quanity</label><br>
+            <input type="text" id="tool-name"><br>
+            <label for="quanity">Quantity: </label><br>
             <input type="number" id="quanity"><br>
             <label for="price">Price: </label><br>
-            <input type="number" id="price"><br>
-            <button type="submit" id="submit-btn">Add Tool</button> 
+            <input type="number" id="price" step="0.01" min="0"><br>
+            <button type="submit">Add Tool</button> 
         </form>
     </div>
 
+    <br>
+
     <div>
-        <tbody id="tool-table">
-            <table>
+            <table id="tool-table">
                 <thead>
                     <tr>
                         <th>Tool</th>
                         <th>Quanity</th>
                         <th>Price</th>
                     </tr>
-
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </thead>
+                <tbody>
+                </tbody>
             </table>
-        </tbody>
     </div>
 
     <div id="total-cost-display">
         Total Cost: $0
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>  
